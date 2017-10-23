@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-2">
+    <ul class="list-group">
+      <li class="list-group-item active">Menu</li>
+      <li class="list-group-item" *ngFor="let menu of menus" (click)="goDetail(menu.id_menu)">
+        {{ menu.name_menu }}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-10">
+    <div *ngIf="menuDetail">
+
+      <div class="col-sm-6 col-md-4" *ngFor="let item of menuDetail">
+        <div class="thumbnail">
+          <img src="http://sittikiat.streetfood.in.th/images/{{ item.img_restaurant }}" style="width: 620px; height: 250px;">
+          <div class="caption">
+            <p>{{ item.name_restaurant }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
