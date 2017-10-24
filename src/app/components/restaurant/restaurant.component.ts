@@ -11,11 +11,12 @@ import { ActivatedRoute, Router } from "@angular/router";
 export class RestaurantComponent implements OnInit {
 
   private restaurants: Restaurant[];
+  private restaurantDetail: any;
   private restaurantCategory: any;
 
   constructor(private restaurantService: RestaurantService, private activatedRoute: ActivatedRoute, private router: Router) {
     // param url
-    console.log(this.activatedRoute.snapshot.params["id"]);
+    // console.log(this.activatedRoute.snapshot.params["id"]);
   }
 
   ngOnInit() {
@@ -40,16 +41,15 @@ export class RestaurantComponent implements OnInit {
   }
 
   private goRestaurantCategoryDetail(id: number): void {
-    this.restaurantService.getRestaurantDetail(id).subscribe(
+    this.restaurantService.getRestaurantCategoryDetail(id).subscribe(
       (res) => this.restaurants = res,
       (err) => alert(err),
       () => console.log("success")
     )
   }
 
-  private goRestaurantDetail(id: number): void {
-    // todo
-    console.log(id);
+  private goRestaurantDetail(data: any): void {
+    this.restaurantDetail = data;
   }
 
 }

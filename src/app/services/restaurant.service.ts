@@ -16,7 +16,7 @@ export class RestaurantService {
       .catch((err: any) => Observable.throw(err.json() || "Not connect to server"));
   }
 
-  public getRestaurantDetail(id: number): Observable<Restaurant[]> {
+  public getRestaurantCategoryDetail(id: number): Observable<Restaurant[]> {
     return this.http.get(`http://sittikiat.streetfood.in.th:3000/api/restaurant/${id}`)
       .map((res: Response) => <Restaurant[]> res.json())
       .catch((err: any) => Observable.throw(err.json() || "Not connect to server"));
@@ -27,5 +27,12 @@ export class RestaurantService {
       .map((res: Response) => res.json())
       .catch((err: any) => Observable.throw(err.json() || "Not connect to server"));
   }
+
+  public getRestaurantDetail(id: number): Observable<any> {
+    return this.http.get(`http://sittikiat.streetfood.in.th:3000/api/restaurant_detail/${id}`)
+      .map((res: Response) => res.json())
+      .catch((err: any) => Observable.throw(err.json() || "Not connect to server"));
+  }
+
 
 }
