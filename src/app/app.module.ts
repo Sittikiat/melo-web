@@ -13,6 +13,7 @@ import { TestPipe } from "./pipes/test.pipe";
 
 import { RestaurantService } from "./services/restaurant.service";
 import { MenuService } from "./services/menu.service";
+import { SearchPipe } from './pipes/search.pipe';
 
 const appRouter: Routes = [
   { path: "", component: HomeComponent },
@@ -28,7 +29,8 @@ const appRouter: Routes = [
     RestaurantComponent,
     MenuComponent,
     HomeComponent,
-    TestPipe
+    TestPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
