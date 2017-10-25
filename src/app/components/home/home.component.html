@@ -1,4 +1,19 @@
-<div class="jumbotron">
+{{ date | date:"dd/mm/yyyy" }}
+<br />
+{{ num | number:"1.2-2" | percent }}
+<br />
+{{ currency | currency:"USD":true }}
+<br />
+{{ 3500 | currency:"eur":true }}
+<br />
+{{ data | json }}
+<br />
+{{ text | slice:0:4 }}
+<br />
+{{ title | test: 90000 }}
+
+
+<!-- <div class="jumbotron">
   <h1>Welcome to Streetfood</h1>
 </div>
 <hr>
@@ -27,4 +42,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

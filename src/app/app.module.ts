@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { RestaurantComponent } from './components/restaurant/restaurant.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
+import { TestPipe } from "./pipes/test.pipe";
 
 import { RestaurantService } from "./services/restaurant.service";
 import { MenuService } from "./services/menu.service";
@@ -26,7 +27,8 @@ const appRouter: Routes = [
     HeaderComponent,
     RestaurantComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    TestPipe
   ],
   imports: [
     BrowserModule,

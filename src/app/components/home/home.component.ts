@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { TestPipe } from "../../pipes/test.pipe";
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,19 @@ import { Router } from "@angular/router";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  private date: string = Date();
+  private num: number = 3.14159;
+  private currency: number = 2000;
+  private data: any;
+  private text: string = "sittikiat";
+  private title = 100;
+
+  constructor(private router: Router) {
+    this.data = [
+      { id: "123", name: "mike" },
+      { id: "456", name: "john" }
+    ]
+  }
 
   ngOnInit() {
   }
