@@ -1,0 +1,54 @@
+<h3>Restaurant admin</h3>
+<hr />
+<form novalidate [formGroup]="myForm" (ngSubmit)="submited()">
+
+  <div class="form-group">
+    <label for="name">ร้านอาหาร</label>
+    <input type="text" id="name" class="form-control" formControlName="name">
+  </div>
+
+  <div class="form-group">
+    <label for="info">รายละเอียดร้าน</label>
+    <input type="text" id="info" class="form-control" formControlName="info">
+  </div>
+
+  <div class="form-group">
+    <label for="rate">คะแนน</label>
+    <input type="number" id="rate" class="form-control" formControlName="rate">
+  </div>
+
+  <div class="form-group">
+    <label for="address">ที่อยู่</label>
+    <input type="text" id="address" class="form-control" formControlName="address">
+  </div>
+
+  <div class="form-group">
+    <label for="img">รูปภาพ</label>
+    <input type="file" id="img" class="form-control" formControlName="img">
+  </div>
+
+  <div class="form-group">
+    <label for="lat">ละติจูด</label>
+    <input type="number" id="lat" class="form-control" formControlName="lat">
+  </div>
+
+  <div class="form-group">
+    <label for="lng">ลองติจูด</label>
+    <input type="number" id="lng" class="form-control" formControlName="lng">
+  </div>
+
+  <div class="form-group">
+    <label for="restaurantCategory">หมวดหมู่ร้านอาหาร</label>
+    <input type="number" id="restaurantCategory" class="form-control" formControlName="restaurantCategory">
+  </div>
+
+  <div class="form-group">
+    <label for="menu">หมวดหมู่เมนู</label>
+    <input type="number" id="menu" class="form-control" formControlName="menu">
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-success" [disabled]="!myForm.valid" type="submit">Submit</button>
+  </div>
+
+</form>

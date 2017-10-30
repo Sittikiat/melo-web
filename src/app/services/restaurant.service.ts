@@ -34,5 +34,12 @@ export class RestaurantService {
       .catch((err: any) => Observable.throw(err.json() || "Not connect to server"));
   }
 
+  public postRestaurant(data) {
+    let body = {
+      "name": data
+    }
+    return this.http.post("http://sittikiat.streetfood.in.th:3000/restaurant/comment/new", body)
+  }
+
 
 }
